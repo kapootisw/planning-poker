@@ -21,6 +21,10 @@ class Game extends Component {
     ] })
   }
 
+  addNewStory = () => {
+    window.alert('We want a new story!')
+  }
+
   render () {
     return (
       <div className={'planning-game'}>
