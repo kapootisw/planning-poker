@@ -40,12 +40,8 @@ class App extends Component {
       <div className='App'>
         <Router>
           <Switch>
-            <Route path='/:gameId'>
-              <Game />
-            </Route>
-            <Route path='/'>
-              <NewGame />
-            </Route>
+            <Route path='/:gameId' component={Game}/>
+            <Route path='/' component={NewGame} />
           </Switch>
         </Router>
       </div>
