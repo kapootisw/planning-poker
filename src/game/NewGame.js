@@ -41,6 +41,14 @@ class NewGame extends Component {
           onChange={this.updateGameName}
           value={this.state.gameName}
         />
+        <select
+          name={''}
+          onChange={() => window.alert('You changed it!')}
+          value={this.state.votingValuesChoice}
+        >
+          <option value={''}>This is a test</option>
+          <option value={'1'}>This is a test too</option>
+        </select>
         <Button
           label={'Create Game'}
           onClick={this.createGame}
