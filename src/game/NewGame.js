@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { TextInput } from '../common/inputs/TextInput'
+import { Select } from '../common/inputs/Select'
 import { Button } from '../common/inputs/Button'
 import uuid from 'uuid/v4'
 
@@ -18,6 +19,11 @@ class NewGame extends Component {
   updateGameName = (e) => {
     e.preventDefault && e.preventDefault()
     this.setState({ gameName: e.target.value })
+  }
+
+  updateVotingValuesChoice = (e) => {
+    e.preventDefault && e.preventDefault()
+    this.setState({ votingValuesChoice: e.target.value })
   }
 
   createGame = () => {
@@ -41,14 +47,17 @@ class NewGame extends Component {
           onChange={this.updateGameName}
           value={this.state.gameName}
         />
-        <select
-          name={''}
-          onChange={() => window.alert('You changed it!')}
+        <Select
+          name={'votingValuesChoice'}
+          onChange={this.updateVotingValuesChoice}
           value={this.state.votingValuesChoice}
-        >
-          <option value={''}>This is a test</option>
-          <option value={'1'}>This is a test too</option>
-        </select>
+          options={
+            [
+              <option value={'fibonocci'}>Fibonocci</option>,
+              <option value={'tshirt'}>T-Shirt Sizes</option>,
+            ]
+          }
+        />
         <Button
           label={'Create Game'}
           onClick={this.createGame}
