@@ -12,12 +12,16 @@
 .planning-complete-story-text {
   flex-grow: 10;
 }
+.planning-complete-story-text div {
+  padding: 10px;
+}
 
 .planning-complete-score-container {
   display: inherit;
   flex-grow: 1;
   align-items: center;
 }
+
 .planning-complete-story-score {
   background-color: yellowgreen;
   max-width: 25px;
