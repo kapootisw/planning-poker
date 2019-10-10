@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { TextInput } from '../common/inputs/TextInput'
+import { Button } from '../common/inputs/Button'
+import uuid from 'uuid/v4'
 
 class NewGame extends Component {
   state = {
@@ -18,6 +20,11 @@ class NewGame extends Component {
     this.setState({ gameName: e.target.value })
   }
 
+  createGame = () => {
+    // TODO: actually make this create the game in the db
+    this.props.history.push(`/${uuid()}`)
+  }
+
   render = () => {
     return (
       <div className={'newGame'}>
@@ -33,6 +40,10 @@ class NewGame extends Component {
           labelText={'Game Name'}
           onChange={this.updateGameName}
           value={this.state.gameName}
+        />
+        <Button
+          label={'Create Game'}
+          onClick={this.createGame}
         />
       </div>
     )
