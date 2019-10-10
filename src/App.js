@@ -1,7 +1,13 @@
 import React, { Component } from 'react'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from 'react-router-dom'
 // import firestore from './fire'
 import './css/App.css'
 import Game from './game/Game'
+import NewGame from './game/NewGame'
 
 class App extends Component {
   state = {
@@ -31,11 +37,20 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <Game />
+      <div className='App'>
+        <Router>
+          <Switch>
+            <Route path='/:gameId'>
+              <Game />
+            </Route>
+            <Route path='/'>
+              <NewGame />
+            </Route>
+          </Switch>
+        </Router>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
