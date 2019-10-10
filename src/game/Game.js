@@ -17,6 +17,7 @@ class Game extends Component {
         key={'test'}
         id={'test'}
         votingValues={this.state.votingValues}
+        addNewStory={this.addNewStory}
       />
     ] })
   }
