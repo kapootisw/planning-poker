@@ -3,3 +3,25 @@
   margin: 10px;
   padding: 10px;
 }
+
+.planning-complete-story {
+  display: flex;
+  align-items: center;
+}
+
+.planning-complete-story-text {
+  flex-grow: 10;
+}
+
+.planning-complete-score-container {
+  display: inherit;
+  flex-grow: 1;
+  align-items: center;
+}
+.planning-complete-story-score {
+  background-color: yellowgreen;
+  max-width: 25px;
+  padding: 10px;
+  height: 20px;
+  margin: 10px;
+}
