@@ -1,0 +1,16 @@
+.planning-card {
+  border: 1px solid red;
+  border-radius: 5px;
+  margin: 10px;
+  width: 80px;
+  height: 110px;
+}
+
+.planning-card.hidden {
+  background-color: red;
+}
+
+.planning-card div {
+  padding: 30px 0;
+  font-size: 45px;
+}

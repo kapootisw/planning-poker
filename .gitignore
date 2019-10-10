@@ -4,6 +4,16 @@
 /node_modules
 /.pnp
 .pnp.js
+/.firebase
+/functions
+.firebaserc
+database.rules.json
+firebase.json
+firestore.indexes.json
+firestore.rules
+firebase.debug.log
+storage.rules
+/src/outsideComponents
 
 # testing
 /coverage
@@ -21,3 +31,4 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+package-lock.json

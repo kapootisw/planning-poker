@@ -1,0 +1,27 @@
+.planning-input {
+  margin: 10px;
+}
+
+.planning-input-label {
+  display: block;
+}
+
+.planning-input input,
+.planning-input textarea,
+.planning-input.planning-button {
+  border-radius: 5px;
+}
+
+.planning-input input {
+  text-align: center;
+}
+
+.planning-input textarea {
+  width: 75%;
+}
+
+.planning-input.planning-button {
+  max-height: 20px;
+  border: 1px solid green;
+  padding: 10px;
+}

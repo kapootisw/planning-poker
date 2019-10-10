@@ -1,0 +1,8 @@
+.planning-story-actions {
+  display: flex;
+}
+
+.planning-voting-values, .planning-action-buttons {
+  display: flex;
+  margin: 10px;
+}
