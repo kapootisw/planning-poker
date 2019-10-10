@@ -55,8 +55,8 @@ class NewGame extends Component {
           value={this.state.votingValuesChoice}
           options={
             [
-              <option value={'fibonocci'}>Fibonocci (0, 0.5, 1, 2, 3, 5, 8, 13, 21, ?)</option>,
-              <option value={'tshirt'}>T-Shirt Sizes (XXS, XS, S, M, L, XL, XXL)</option>,
+              <option key={'fibonocci'} value={'fibonocci'}>Fibonocci (0, 0.5, 1, 2, 3, 5, 8, 13, 21, ?)</option>,
+              <option key={'tshirt'} value={'tshirt'}>T-Shirt Sizes (XXS, XS, S, M, L, XL, XXL)</option>,
             ]
           }
         />
