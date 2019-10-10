@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import Story from './Story'
+import StoryContainer from './StoryContainer'
+import uuid from 'uuid/v4'
 
 class Game extends Component {
   state = {
@@ -13,23 +14,28 @@ class Game extends Component {
 
   loadStories = () => {
     this.setState({ stories: [
-      <Story
-        key={'test'}
-        id={'test'}
-        votingValues={this.state.votingValues}
-        addNewStory={this.addNewStory}
-      />
+      {
+        id: uuid(),
+      }
     ] })
   }
 
   addNewStory = () => {
-    window.alert('We want a new story!')
+    this.setState(prevState => {
+      return {
+        stories: prevState.stories.concat({ id: uuid() })
+      }
+    })
   }
 
   render () {
     return (
       <div className={'planning-game'}>
-        {this.state.stories}
+        <StoryContainer
+          stories={this.state.stories}
+          votingValues={this.state.votingValues}
+          addNewStory={this.addNewStory}
+        />
       </div>
     )
   }
