@@ -21,14 +21,14 @@ export function StoryActions ({ score, votingValues = [], voteForValue, updateSc
               {votingValues.map(votingValue => (
                 <Button
                   key={votingValue}
-                  label={votingValue === -1 ? '?' : votingValue}
+                  labelText={votingValue === -1 ? '?' : votingValue}
                   onClick={() => voteForValue(votingValue)}
                 />
               ))}
             </div>
             <div className="planning-action-buttons">
               <Button
-                label={'Reveal Cards'}
+                labelText={'Reveal Cards'}
                 onClick={revealCards}
               />
             </div>
@@ -36,11 +36,11 @@ export function StoryActions ({ score, votingValues = [], voteForValue, updateSc
           :
             <div className="planning-action-buttons">
               <Button
-                label={'Complete Story'}
+                labelText={'Complete Story'}
                 onClick={completeStory}
               />
               <Button
-                label={'Replay'}
+                labelText={'Replay'}
                 onClick={replayStory}
               />
             </div>
