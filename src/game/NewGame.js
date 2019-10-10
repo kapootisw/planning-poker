@@ -13,6 +13,11 @@ class NewGame extends Component {
     this.setState({ moderatorName: e.target.value })
   }
 
+  updateGameName = (e) => {
+    e.preventDefault && e.preventDefault()
+    this.setState({ gameName: e.target.value })
+  }
+
   render = () => {
     return (
       <div className={'newGame'}>
@@ -22,6 +27,12 @@ class NewGame extends Component {
           labelText={'Your Name'}
           onChange={this.updateModeratorName}
           value={this.state.moderatorName}
+        />
+        <TextInput
+          name={'gameName'}
+          labelText={'Game Name'}
+          onChange={this.updateGameName}
+          value={this.state.gameName}
         />
       </div>
     )
