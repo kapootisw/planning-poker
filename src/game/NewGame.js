@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { TextInput } from '../common/inputs/TextInput'
 import { Select } from '../common/inputs/Select'
 import { Button } from '../common/inputs/Button'
+import '../css/NewGame.css'
 import uuid from 'uuid/v4'
 
 class NewGame extends Component {
