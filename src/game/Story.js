@@ -71,30 +71,24 @@ class Story extends Component {
   }
 
   render () {
+    const StoryBodyComponent = this.state.complete ? CompleteStoryBody : VotingStoryBody
     return (
       <div key={this.props.id} className={'planning-story'}>
-        {
-          this.state.complete
-          ? <CompleteStoryBody
-
-            />
-          : <VotingStoryBody
-              updateTitle={this.updateTitle}
-              title={this.state.title}
-              updateNotes={this.updateNotes}
-              notes={this.state.notes}
-              cards={this.state.cards}
-              votingValues={this.props.votingValues}
-              voteForValue={this.voteForValue}
-              updateScore={this.updateScore}
-              voting={this.state.voting}
-              score={this.state.score >= 0 ? this.state.score : '?'}
-              revealCards={this.revealCards}
-              completeStory={this.completeStory}
-              replayStory={this.replayStory}
-            />
-        }
-
+        <StoryBodyComponent
+          updateTitle={this.updateTitle}
+          title={this.state.title}
+          updateNotes={this.updateNotes}
+          notes={this.state.notes}
+          cards={this.state.cards}
+          votingValues={this.props.votingValues}
+          voteForValue={this.voteForValue}
+          updateScore={this.updateScore}
+          voting={this.state.voting}
+          score={this.state.score >= 0 ? this.state.score : '?'}
+          revealCards={this.revealCards}
+          completeStory={this.completeStory}
+          replayStory={this.replayStory}
+        />
       </div>
     )
   }
