@@ -16,8 +16,21 @@ class Game extends Component {
     this.setState({ stories: [
       {
         id: uuid(),
+        title: '',
+        notes: '',
+        voting: true,
+        cards: [],
+        score: -1,
+        complete: false,
       }
     ] })
+  }
+
+  updateValueOnStoryByKey = (storyId, key, value) => {
+    // this.setState(prevState => {
+    //   const storyToEdit = prevState.stories.find(story => story.id === storyId)
+    //   return { [key]: value }
+    // })
   }
 
   addNewStory = () => {
