@@ -13,17 +13,7 @@ class Game extends Component {
   }
 
   loadStories = () => {
-    this.setState({ stories: [
-      {
-        id: uuid(),
-        title: '',
-        notes: '',
-        voting: true,
-        cards: [],
-        score: -1,
-        complete: false,
-      }
-    ] })
+    this.addNewStory()
   }
 
   updateValuesOnStoryByKey = (storyId, changeList = []) => {
