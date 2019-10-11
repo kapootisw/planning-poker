@@ -38,7 +38,16 @@ class Game extends Component {
   addNewStory = () => {
     this.setState(prevState => {
       return {
-        stories: prevState.stories.concat({ id: uuid() })
+        stories: prevState.stories.concat(
+          {
+            id: uuid(),
+            title: '',
+            notes: '',
+            voting: true,
+            cards: [],
+            score: -1,
+            complete: false,
+          })
       }
     })
   }
