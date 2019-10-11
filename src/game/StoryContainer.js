@@ -1,7 +1,7 @@
 import React from 'react'
 import Story from './Story'
 
-export default function StoryContainer ({ stories = [], votingValues = [], addNewStory }) {
+export default function StoryContainer ({ stories = [], votingValues = [], addNewStory, updateValuesOnStoryByKey }) {
   return (
     <div>
       {
@@ -12,6 +12,7 @@ export default function StoryContainer ({ stories = [], votingValues = [], addNe
             story={story}
             votingValues={votingValues}
             addNewStory={addNewStory}
+            updateValuesOnStoryByKey={updateValuesOnStoryByKey}
           />
         ))
       }

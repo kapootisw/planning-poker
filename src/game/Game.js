@@ -26,11 +26,13 @@ class Game extends Component {
     ] })
   }
 
-  updateValueOnStoryByKey = (storyId, key, value) => {
-    // this.setState(prevState => {
-    //   const storyToEdit = prevState.stories.find(story => story.id === storyId)
-    //   return { [key]: value }
-    // })
+  updateValuesOnStoryByKey = (storyId, changeList = []) => {
+    this.setState(prevState => {
+      const stories = prevState.stories.slice()
+      const storyToEdit = stories.find(story => story.id === storyId)
+      changeList.forEach(({ key, value }) => storyToEdit[key] = value)
+      return { stories }
+    })
   }
 
   addNewStory = () => {
@@ -48,6 +50,7 @@ class Game extends Component {
           stories={this.state.stories}
           votingValues={this.state.votingValues}
           addNewStory={this.addNewStory}
+          updateValuesOnStoryByKey={this.updateValuesOnStoryByKey}
         />
       </div>
     )
